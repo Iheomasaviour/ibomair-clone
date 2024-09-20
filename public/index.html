@@ -1,0 +1,476 @@
+   
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+    <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> -->
+      <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+        
+          <div class="logo">
+            <img src="./asset/ibom-air-logo_small_trans (1).png" alt="logo">
+        </div>
+          <a href="#" class="flex items-center">
+            
+            
+          </a>
+        </div>
+        
+
+        <ul class="flex space-x-4">
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">Home</button></li>
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">Manage Booking</button></li>
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">ibom flyer</button></li> 
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">Destination</button></li>
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">Travel Information</button></li>
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">FAQ</button></li>
+          <li><button class="bg-black-500 hover: text-black px-4 py-2 rounded">About Us</button></li>
+
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- <header class="relative bg-blue-500 text-white h-96" style="background-image: url('plane-image.jpg'); background-size: cover;"> -->
+    <div class="header-container">
+    <header class="relative bg-blue-300 text-yellow-500 h-50 object-contain background-size:cover;"  style="background-image: url('./asset/CRJ-900-takeoofpng.png');" >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex flex-col justify-center items-center h-full">
+      <h1 class="text-5xl font-bold">Excellence is in our DN-A</h1>
+      <!-- <img class="w" src="./asset/CRJ-900-takeoofpng.png" alt=""> -->
+    </div>
+  </header>
+</div>
+
+  <!-- Booking Form Section -->
+  <section class="max-w-7xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+
+    <div class="flex justify-between border-b border-gray-300 mb-6 bg-red-500">
+      <button class="text-red-500 flex items-center space-x-2 py-2 px-4">
+        <i class="fas fa-plane text-xl"></i>
+        <span>flight</span>
+      </button>
+      <button class="flex items-center space-x-2 py-2 px-4">
+        <i class="fas fa-tasks text-xl"></i>
+        <span>Manage Booking</span>
+      </button>
+      <button class="flex items-center space-x-2 py-2 px-4">
+        <i class="fas fa-calendar-check text-xl"></i>
+        <span>Check-in</span>
+      </button>
+    </div>
+
+    <!-- Trip Type Radio Buttons -->
+     <div class="bg-red-400">
+    <div class="flex justify-around mb-6">
+      <div class="flex items-center space-x-2">
+        <input type="radio" name="trip_type" id="one-way" class="form-radio" checked>
+        <label for="one-way" class="text-sm font-medium">One Way</label>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input type="radio" name="trip_type" id="round-trip" class="form-radio">
+        <label for="round-trip" class="text-sm font-medium">Round Trip</label>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input type="radio" name="trip_type" id="multi-city" class="form-radio">
+        <label for="multi-city" class="text-sm font-medium">Multi City</label>
+      </div>
+    </div>
+
+    <!-- Flight Search Form -->
+    <form class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="from" class="block text-sm font-medium text-gray-700">From</label>
+        <input type="text" id="from" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="to" class="block text-sm font-medium text-gray-700">To</label>
+        <input type="text" id="to" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <div>
+        <label for="departure" class="block text-sm font-medium text-gray-700">Departure Date</label>
+        <input type="date" id="departure" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="return" class="block text-sm font-medium text-gray-700">Return Date</label>
+        <input type="date" id="return" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <div>
+        <label for="adults" class="block text-sm font-medium text-gray-700">Passengers</label>
+        <select id="adults" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>1 Adult</option>
+          <option>2 Adults</option>
+        </select>
+      </div>
+      <div>
+        <label for="currency" class="block text-sm font-medium text-gray-700">Currency</label>
+        <select id="currency" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>USD</option>
+          <option>NGN</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="cabin-class" class="block text-sm font-medium text-gray-700">Cabin Classes</label>
+        <select id="cabin-class" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>Economy</option>
+          <option>Business</option>
+        </select>
+      </div>
+      <div>
+        <label for="account-code" class="block text-sm font-medium text-gray-700">Account Code</label>
+        <input type="text" id="account-code" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+    </form>
+
+    <div class="flex justify-center mt-6">
+      <button class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">Search Flights</button>
+
+    </div>
+  </div>
+  </section>
+
+  <body class="bg-gray-100">
+
+    <!-- Where We Fly Section -->
+    <section class="max-w-7xl mx-auto py-16 px-4">
+      <!-- Title -->
+      <h2 class="text-center text-3xl font-semibold text-gray-800 mb-12">Where We Fly</h2>
+      
+      <!-- Grid of Cities -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/image uyo.png" alt="Uyo" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Uyo</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/image abuja.png" alt="Abuja" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Abuja</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/accra.png" alt="Accra" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Accra</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/calabar.png" alt="Calabar" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Calabar</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/enugu.png" alt="Enugu" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Enugu</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/lagos.png" alt="Lagos" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Lagos</h3>
+          </div>
+        </div>
+        
+        <!-- City Card -->
+        <div class="relative group">
+          <img src="./asset/port harcourt.png" alt="Port Harcourt" class="w-full h-48 object-cover rounded-lg shadow-md">
+          <div class="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity rounded-lg"></div>
+          <div class="absolute bottom-4 left-4">
+            <h3 class="text-white text-lg font-semibold">Port Harcourt</h3>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+
+    
+  <section class="max-w-7xl mx-auto py-16 px-6">
+    <div class="flex flex-col lg:flex-row items-center bg-red-400 shadow-lg rounded-lg overflow-hidden">
+      
+    
+      <div class="bg-red-500 text- p-8 lg:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">Ibom Flyer</h2>
+        <p class="mb-4">
+          Ibom Flyer is Ibom Air's Customer Loyalty Program designed to reward frequent flyers of Ibom Air. Membership of the program provides access to exclusive benefits designed to make travel more rewarding and enjoyable for our customers.
+        </p>
+        <p class="mb-8">
+          With Ibom Flyer, members experience a unique recognition, rewards, and differentiated service level across three membership tiers: Green, Orange, and Top.
+        </p>
+        <a href="#" class="bg-green-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition duration-200 inline-block">Sign Up / Login</a>
+      </div>
+
+      
+      <div class="lg:w-1/2 p-4">
+        <img src="./asset/ibom-flyer-card-stack-836x462.png" alt="Ibom Flyer Cards" class="w-full h-auto object-cover">
+      </div>
+    </div>
+  </section>
+  
+  <section class="max-w-4xl mx-auto py-16 px-4 text-center">
+    
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">EXPERIENCE SERVICE AT A NEW ALTITUDE</h2>
+
+    
+    <div class="mb-6">
+      <svg class="mx-auto w-8 h-8 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </div>
+
+    
+    <p class="text-gray-600 text-lg mb-8">
+      Ibom Air is committed to safety, service excellence, hospitality & innovation. Fly Ibom Air for unparalleled customer service and memorable travel experiences such as Nigeria to Ghana. We are proud to be the airline of choice for customers in Nigeria, West Africa & beyond. We truly appreciate your loyalty!
+    </p>
+
+    
+    <a href="#" class="bg-green-700 text-white py-3 px-6 rounded-lg hover:bg-green-800 transition duration-200">
+      ON-TIME PERFORMANCE STATS
+    </a>
+  </section>
+
+  <!-- Latest News Section -->
+  <section class="max-w-7xl mx-auto py-16 px-6">
+    <!-- Title -->
+    <h2 class="text-center text-3xl font-semibold text-gray-800 mb-4">LATEST NEWS & UPDATES</h2>
+    <div class="flex justify-center mb-8">
+      <svg class="w-10 h-10 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </div>
+
+    <!-- Grid of News Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- News Card 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="./asset/discount ibom1.png" alt="Ibom Air Airbus" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">July 11, 2024</p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Ibom Air Boosts Fleet With Additional Airbus A220-300</h3>
+          <p class="text-gray-600">Ibom Air adds more aircraft to its fleet to provide better service.</p>
+        </div>
+      </div>
+
+      <!-- News Card 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="./asset/discount 2.png" alt="Ibom Air Anniversary" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">June 7, 2024</p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Ibom Air Marks 5th Anniversary, Unveils Plans for the Future</h3>
+          <p class="text-gray-600">Ibom Air celebrates its anniversary with new plans and services.</p>
+        </div>
+      </div>
+
+      <!-- News Card 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="./asset/discount 3.png" alt="Ibom Air Score Card" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">January 4, 2024</p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Ibom Air Annual Score Card 2023</h3>
+          <p class="text-gray-600">Check out Ibom Air's performance metrics and achievements for 2023.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call-to-Action Button -->
+    <div class="flex justify-center mt-12">
+      <a href="#" class="bg-orange-500 text-white py-3 px-8 rounded-lg shadow-md hover:bg-red-600 transition duration-200">
+        Visit Our Blog
+      </a>
+    </div>
+  </section>
+
+  <!-- Card Grid Section -->
+  <section class="max-w-7xl mx-auto py-12 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      
+      <!-- Card 1: Check-in -->
+      <div class="relative group">
+        <img src="./asset/iphone.png" alt="Check-in" class="w-full h-64 object-cover rounded-lg shadow-md">
+        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-opacity flex justify-center items-center">
+          <h3 class="text-white text-2xl font-semibold">Check-in</h3>
+        </div>
+      </div>
+
+      <!-- Card 2: Baggage -->
+      <div class="relative group">
+        <img src="./asset/baggage.png" alt="Baggage" class="w-full h-64 object-cover rounded-lg shadow-md">
+        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-opacity flex justify-center items-center">
+          <h3 class="text-white text-2xl font-semibold">Baggage</h3>
+        </div>
+      </div>
+
+      <!-- Card 3: Manage -->
+      <div class="relative group">
+        <img src="./asset/wing flight.png" alt="Manage" class="w-full h-64 object-cover rounded-lg shadow-md">
+        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-opacity flex justify-center items-center">
+          <h3 class="text-white text-2xl font-semibold">Manage</h3>
+        </div>
+      </div>
+
+      <!-- Card 4: Schedules -->
+      <div class="relative group">
+        <img src="./asset/shedule.png" alt="Schedules" class="w-full h-64 object-cover rounded-lg shadow-md">
+        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-opacity flex justify-center items-center">
+          <h3 class="text-white text-2xl font-semibold">Schedules</h3>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </section>
+
+  <!-- Sign Up Section -->
+  <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('./asset/background\ img\ ibom.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-40 shadow-transparent"></div> <!-- Dark Overlay -->
+
+    <!-- Form Container -->
+    <div class="absolute top-1/2 right-16 transform -translate-y-1/2 bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-3xl font-bold text-red-500 mb-6">Sign Up for Our Newsletter</h2>
+      <form action="#" method="POST" class="space-y-4">
+        
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name*</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 p-3">
+        </div>
+        
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email*</label>
+          <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 p-3">
+        </div>
+        
+        <!-- Phone Number -->
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+          <input type="text" id="phone" name="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 p-3">
+        </div>
+        
+        <!-- Birthday -->
+        <div>
+          <label for="birthday" class="block text-sm font-medium text-gray-700">Birthday</label>
+          <input type="date" id="birthday" name="birthday" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 p-3">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  
+  <!-- feedback -->
+  <section class="" >
+    <div class="bg-white text-center py-12">
+      <h2 class= "text-xl font-semibold text-red-600">We Want Your Feedback</h2>
+      <p class="text-lg text-gray-700 max-w-xl mx-auto mb-8">Our goal is to provide top notch service at every point of your Ibom Air experience. Therefore, we are always happy to hear your views so we can continue to 
+        <br>improve our offerings and surpass our passengers’ expectations. To share your comments & suggestions with us, please fill out and submit our online feedback form.
+
+      </p>
+
+      <a href="#" class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700 transition-colors">FEEDBACK</a>
+
+    </div>
+
+
+  </section>
+
+  <section class="max-w-4x2 mx-auto py-12">
+
+    <video class="w-full relative h-auto rounded-lg shadow-lg" controls>
+      <source src="./asset/3678380-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="absolute top-52% left-44%">
+      <h2 class="text-[40px] text-black">Get in Touch!
+        Victor Attah International Airport | info@ibomair.com</h2>
+    </div>
+  </section>
+
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-4x2 mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <!-- <h1 class="text-3xl font-bold">Ibom Air</h1> -->
+             <img src="./asset/ibom-air-logo_small_trans (1).png" alt="">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Contact Information</h2>
+                <p class="font-semibold">📍 Victor Attah International Airport</p>
+                <p class="mb-4">Uyo, Akwa Ibom</p>
+                <p class="mb-2">✉ <a href="mailto:reservations@ibomair.com" class="text-blue-600 hover:underline">reservations@ibomair.com</a> (for reservations & ticketing enquiries)</p>
+                <p class="mb-2">✉ <a href="mailto:info@ibomair.com" class="text-blue-600 hover:underline">info@ibomair.com</a> (for general enquiries)</p>
+                <p class="mb-2">✉ <a href="mailto:ibomflyersupport@ibomair.com" class="text-blue-600 hover:underline">ibomflyersupport@ibomair.com</a> (for IbomFlyer enquiries)</p>
+            </div>
+
+            Customer Service
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Customer Service</h2>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold">🇳🇬 Nigeria (7C00am – 5:00pm WAT)</h3>
+                    <p class="mb-2">📞 <a href="tel:+234700123594266" class="text-blue-600 hover:underline">+234 (0) 700123594266</a></p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold">🇬🇭 Ghana (8:00am – 5:00pm WAT)</h3>
+                    <p class="mb-2">📞 <a href="tel:+233303957033" class="text-blue-600 hover:underline">+233 (0) 30 395 7033</a></p>
+                    <p class="mb-2">📞 <a href="tel:+233202325226" class="text-blue-600 hover:underline">+233 (0) 20 232 5226</a></p>
+                    <p>1st Floor, Nester Square, Airport City</p>
+                </div>
+
+                <div>
+                    <p>📞 <a href="tel:+233303956985" class="text-blue-600 hover:underline">+233 (0) 30 395 6985</a></p>
+                    <p>Terminal 3 – Departure hall, Kotoka International Airport, Accra, Ghana</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+
+</body>
+</html>
